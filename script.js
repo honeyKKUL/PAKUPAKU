@@ -1,3 +1,13 @@
+
+<div id="table">식탁</div>
+<div id="characters">
+  <div id="charA" class="char">A 캐릭터</div>
+  <div id="charB" class="char">B 캐릭터</div>
+</div>
+
+<p>점수: <span id="score">0</span> | 실패: <span id="failCount">0</span></p>
+<p id="gameOver" style="color:red; font-weight:bold;"></p>
+
 let score = 0;
 let failCount = 0;
 const maxFail = 5;
