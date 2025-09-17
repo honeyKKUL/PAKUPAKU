@@ -5,7 +5,7 @@ body { font-family: sans-serif; text-align: center; }
   height: 100px;
   border: 2px solid #aaa;
   position: absolute;
-  left: 0px;  /* 식탁 위치 직접 지정 가능 */
+  left: 200px;  /* 식탁 위치 직접 지정 가능 */
   top: 0px;
   line-height: 100px;
   text-align: center;
