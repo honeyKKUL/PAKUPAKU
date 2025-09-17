@@ -4,9 +4,9 @@ body {
 }
 
 #table {
-  left: 200px;
-  top: 100px;
-  width: 100%;
+  left: 100px;
+  top: 0px;
+  width: 50%;
   height: 100px;
   border: 2px solid #aaa;
   margin: 20px auto;
