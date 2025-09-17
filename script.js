@@ -1,13 +1,3 @@
-
-<div id="table">식탁</div>
-<div id="characters">
-  <div id="charA" class="char">A 캐릭터</div>
-  <div id="charB" class="char">B 캐릭터</div>
-</div>
-
-<p>점수: <span id="score">0</span> | 실패: <span id="failCount">0</span></p>
-<p id="gameOver" style="color:red; font-weight:bold;"></p>
-
 let score = 0;
 let failCount = 0;
 const maxFail = 5;
@@ -25,7 +15,6 @@ function spawnFood() {
   const table = document.getElementById("table");
   table.innerHTML = ""; // 이전 음식 제거
 
-  // 랜덤 음식 생성
   const foodData = foods[Math.floor(Math.random() * foods.length)];
   const food = document.createElement("div");
   food.textContent = foodData.emoji;
@@ -33,11 +22,9 @@ function spawnFood() {
   food.dataset.type = foodData.type;
   food.setAttribute("draggable", "true");
 
-  // table 안 중앙 위치 (원하면 style.css에서 table 위치로 조정)
   food.style.left = "20px";
   food.style.top = "20px";
 
-  // 드래그 이벤트
   food.addEventListener("dragstart", e => {
     e.dataTransfer.setData("type", food.dataset.type);
     e.dataTransfer.setData("id", Date.now().toString());
@@ -47,7 +34,6 @@ function spawnFood() {
   table.appendChild(food);
 }
 
-// 캐릭터 drop 이벤트
 ["charA","charB"].forEach(id => {
   const char = document.getElementById(id);
   char.addEventListener("dragover", e => e.preventDefault());
@@ -70,9 +56,8 @@ function spawnFood() {
     }
 
     food.remove();
-    spawnFood(); // 다음 음식 바로 등장
+    spawnFood();
   });
 });
 
-// 처음 음식 등장
 spawnFood();
