@@ -7,7 +7,7 @@ body { font-family: sans-serif; text-align: center; }
   position: absolute;
   left: 50%;      /* 화면 가로 가운데 */
   top: 150px;     /* 화면 상단에서 150px 아래 */
-  transform: translateX(-50%); /* 가운데 정렬 보정 */
+  transform: translateX(0%); /* 가운데 정렬 보정 */
   line-height: 100px;
   text-align: center;
 }
